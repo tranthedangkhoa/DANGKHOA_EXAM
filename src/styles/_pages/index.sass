@@ -1,0 +1,72 @@
+body
+	font-family: Roboto, sans-serif
+	.home_news
+		text-align: center
+		h2 
+			margin-top: 3rem
+			+fw(900)
+			position: relative
+			margin-bottom: 4rem
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				height: 3px
+				width: 72px
+				background: #00c4c9
+				left: 50%
+				bottom: -20px
+				transform: translateX(-50%)
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				height: 18px
+				width: 18px
+				background: #FFF
+				border: 3px solid #00c4c9
+				border-radius: 50%
+				left: 50%
+				bottom: -28px
+				transform: translateX(-50%)
+			
+		ul.list-group
+			text-align: center
+			li.list-group-item
+				background: none
+				border: 0
+				padding: .7rem 
+				a
+					color: #000
+					+fw(900)
+					+pad(0.5rem 1rem) 
+					&:hover,
+					&:active
+						background: #00c4c9
+						color: #fff
+						text-decoration: none
+						border-radius: 14px
+		.boximg
+			filter: grayscale(100)
+			img 
+				margin-top: 2rem
+				width: 100%
+			&:hover,
+			&:active
+				filter: grayscale(0)
+				transition: .5s all ease-in-out
+				img
+					box-shadow: 3px 3px 0px 0px #00c4c9 
+					box-shadow: 0px 0px 3px 3px #00c4c9
+					transition: .5s all ease-in-out
+					
+	+media-breakpoint-up(sm)
+		.home_news
+			.boximg
+				img 
+					max-width: 100%
+			ul.list-group
+				display: block
+				li.list-group-item
+					padding: .1rem 
+					display: inline

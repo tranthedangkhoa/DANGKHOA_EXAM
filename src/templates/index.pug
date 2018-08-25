@@ -1,0 +1,27 @@
+extends _layout/layout
+
+block variables
+	- var title = 'Home'
+	- var description = 'Description for home page'
+	- var bodyclass = 'home'
+
+block body
+	section.home_news
+		.container
+			.row
+				.col-md-12
+					h2 ĐỊNH HƯỚNG PHÁT TRIỂN
+					ul.list-group.mt-5.mb-0
+						li.list-group-item
+							a(href="#") TẤT CẢ
+						li.list-group-item
+							a(href="#") GROUP
+						li.list-group-item
+							a(href="#") TIN THỊ TRƯỜNG
+						li.list-group-item
+							a(href="#") TIN VỊT
+			.row.mt-3
+				- for(x=1;x<4;x++)
+					.col-md-4.boximg
+						img(src="./img/home_news_1.png", alt="")
+
